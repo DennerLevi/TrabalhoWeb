@@ -19,13 +19,13 @@ namespace TrabalhoWeb.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PessoaService>>> GetAllPessoas()
         {
-            IEnumerable<Pessoa> pessoa = await _pessoaInterface.GetAllPessoas();
+            IEnumerable<Localidades> localidades = await _pessoaInterface.GetAllPessoas();
 
-            if (pessoa == null)
+            if (localidades == null)
                 return NotFound("Nenhum registro encontrado");
 
 
-            return Ok(pessoa);
+            return Ok(localidades);
         }
 
         [HttpPost]

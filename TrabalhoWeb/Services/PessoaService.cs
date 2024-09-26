@@ -16,13 +16,13 @@ namespace TrabalhoWeb.Services
             getConnection  = _configuration.GetConnectionString("DefaultConnection");
         }
 
-        public  async Task<IEnumerable<Pessoa>> GetAllPessoas()
+        public  async Task<IEnumerable<Localidades>> GetAllPessoas()
         {
             //Abrindo conexão com banco
             using (var con = new SqlConnection(getConnection))
             {
-                var sql = "select * from Pessoa";
-                return await con.QueryAsync<Pessoa>(sql);
+                var sql = "select * from Localidades";
+                return await con.QueryAsync<Localidades>(sql);
             }
 
         }

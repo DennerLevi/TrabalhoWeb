@@ -4,7 +4,8 @@ namespace TrabalhoWeb.Services
 {
     public interface IPessoaInterface
     {
-        Task<IEnumerable<Pessoa>> GetAllPessoas();
+        Task<IEnumerable<Localidades>> GetAllPessoas();
+
         Task<Pessoa> GetPessoaById();
 
         Task<IEnumerable<Pessoa>> CreatePessoa(Pessoa pessoa);
